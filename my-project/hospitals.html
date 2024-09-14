@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleMed - Hospitals Nearby</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .read-more {
+            display: none;
+        }
+
+        .read-more-btn {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .hospital-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hospital-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function toggleReadMore(hospitalId) {
+            const content = document.getElementById(hospitalId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Hospitals Near You</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="patient.html">Patients</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hospital-list">
+            <h2>Nearby Hospitals</h2>
+
+            <div class="hospital">
+                <h3>City Hospital</h3>
+                <img class="hospital-image" src="images/gettyimages-1322825405-612x612.jpg" alt="City Hospital Ward">
+                <p>Address: 123 Healthcare St, Cityville</p>
+                <p>Services Offered:</p>
+                <ul>
+                    <li>Emergency care</li>
+                    <li>Outpatient services</li>
+                    <li>Surgery</li>
+                    <li>Maternity care</li>
+                </ul>
+                <p>Price Range: $50 - $200 per service</p>
+                <span class="read-more-btn" onclick="toggleReadMore('city-hospital-details')">Read more</span>
+                <div id="city-hospital-details" class="read-more">
+                    <p><strong>More Information:</strong></p>
+                    <p>City Hospital offers top-quality surgical and outpatient services. Its maternity ward is highly rated for compassionate care.</p>
+                    <img src="images/gettyimages-1341490004-612x612.jpg" alt="City Hospital Activities">
+                    <p><strong>Activities:</strong> Health fairs, free check-up days, and community outreach programs.</p>
+                </div>
+            </div>
+
+            <div class="hospital">
+                <h3>Regional Clinic</h3>
+                <img class="hospital-image" src="images/gettyimages-1351391194-612x612.jpg" alt="Regional Clinic Ward">
+                <p>Address: 456 Medical Ave, Townsville</p>
+                <p>Services Offered:</p>
+                <ul>
+                    <li>General check-ups</li>
+                    <li>Vaccinations</li>
+                    <li>Pediatric services</li>
+                </ul>
+                <p>Price Range: $20 - $100 per service</p>
+                <span class="read-more-btn" onclick="toggleReadMore('regional-clinic-details')">Read more</span>
+                <div id="regional-clinic-details" class="read-more">
+                    <p><strong>More Information:</strong></p>
+                    <p>Family medicine, personalized care for all ages, with a child-friendly environment.</p>
+                    <img src="images/gettyimages-1404962439-612x612.jpg" alt="Regional Clinic Activities">
+                    <p><strong>Activities:</strong> Vaccination drives, free wellness check-ups.</p>
+                </div>
+            </div>
+
+            <div class="hospital">
+                <h3>Healthcare Center</h3>
+                <img class="hospital-image" src="images/gettyimages-1460099874-612x612.jpg" alt="Healthcare Center Ward">
+                <p>Address: 789 Wellness Blvd, Villagetown</p>
+                <p>Services Offered:</p>
+                <ul>
+                    <li>Inpatient care</li>
+                    <li>Physiotherapy</li>
+                    <li>Laboratory diagnostics</li>
+                </ul>
+                <p>Price Range: $30 - $150 per service</p>
+                <span class="read-more-btn" onclick="toggleReadMore('healthcare-center-details')">Read more</span>
+                <div id="healthcare-center-details" class="read-more">
+                    <p><strong>More Information:</strong></p>
+                    <p>Modern diagnostic and physiotherapy services for rehabilitation and wellness.</p>
+                    <img src="images/gettyimages-1475065175-612x612.jpg" alt="Healthcare Center Activities">
+                    <p><strong>Activities:</strong> Therapy workshops, fitness events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="map-integration">
+            <h3>Map of Hospitals</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TeleMed. All rights reserved.</p>
+    </footer>
+</body>
+</html>

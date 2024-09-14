@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleMed - Doctors</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #doctor-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #doctor-list img {
+            max-width: 100px; /* Set max-width for responsive scaling */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        #doctor-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 600px; /* Limit width for better layout on large screens */
+            padding: 10px;
+            box-sizing: border-box; /* Include padding in width calculation */
+            text-align: center; /* Center text for better alignment */
+        }
+
+        @media (max-width: 600px) {
+            #doctor-list img {
+                max-width: 80px; /* Adjust size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meet Our Doctors</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="doctor-list">
+            <h2>Our Expert Doctors</h2>
+            <ul>
+                <li>
+                    <img src="images/gettyimages-592647720-612x612.jpg" alt="Dr. John Doe">
+                    <span>Dr. John Doe - Cardiologist</span>
+                </li>
+                <li>
+                    <img src="images/gettyimages-681733372-612x612.jpg" alt="Dr. Jane Smith">
+                    <span>Dr. Jane Smith - Pediatrician</span>
+                </li>
+                <li>
+                    <img src="images/gettyimages-1147479249-612x612.jpg" alt="Dr. Amy Brown">
+                    <span>Dr. Amy Brown - General Practitioner</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="doctor-availability">
+            <h3>Doctor Availability</h3>
+            <p>Check when your preferred doctor is available:</p>
+            <ul>
+                <li>Dr. John Doe: Mon-Fri, 9 AM - 5 PM</li>
+                <li>Dr. Jane Smith: Mon-Fri, 10 AM - 6 PM</li>
+                <li>Dr. Amy Brown: Mon-Sat, 8 AM - 4 PM</li>
+            </ul>
+        </section>
+
+        <section id="payment-methods">
+            <h3>Accepted Payment Methods</h3>
+            <ul>
+                <li>Credit/Debit Card</li>
+                <li>Insurance</li>
+                <li>Mobile Payments (M-Pesa, PayPal)</li>
+                <li>Bank Transfer</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TeleMed. All rights reserved.</p>
+    </footer>
+</body>
+</html>
